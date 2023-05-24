@@ -1,0 +1,583 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Metadata about the presentation -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>My Projects</title>
+
+    <meta name="description" content="My Projects">
+    <meta name="author" content="Benjamin">
+
+    <!-- Presentation Styles -->
+    <link rel="stylesheet" href="static/revealjs/dist/reset.css">
+    <link rel="stylesheet" href="static/revealjs/dist/reveal.css">
+
+    
+      <link rel="stylesheet" href="static/revealjs/dist/theme/black.css" id="theme">
+    
+
+    
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="static/revealjs/plugin/highlight/monokai.css" id="highlight-theme">
+    <style>
+      .container{
+          display: flex;
+      }
+      .col{
+          flex: 1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Presentation body -->
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  # `My Projects`
+
+陳奎銘 Benjamin Chen
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section>
+                <div class="container" data-background="media/background.png">
+                    
+                    <div data-markdown class="col"  style="font-size: 0.75em;">
+                    ### 陳奎銘 Benjamin
+                    - 學歷
+                        - 陽明大學
+                            - 醫學放射技術學系
+                            - 生物醫學資訊研究所
+                    - 經歷
+                        - Data Scientist
+                            - Momagic Inc.
+                            - Linker Networks Inc.
+                        - 數位發展部 資料應用輔導專家
+                        - R-Ladies Taipei 協辦人
+                        - Microsoft AI MVP
+            
+                    </div>
+                    
+                    <div data-markdown class="col" style="font-size: 0.75em;">
+                    ### 
+                    - 授課經驗        
+                        - 政府公部門或協會：
+                            - 台灣資料科學愛好者年會
+                            - 工研院
+                            - 國防大學
+                            - 政治大學
+                            - 新北市程式教育體驗中心
+                            - 數位發展部
+                        - 公司行號：
+                            - 永豐銀行
+                            - 裕隆汽車
+                            - 港務公司
+            
+            
+                    </div>
+                </div>
+            </section>
+            
+          
+        
+            <section data-markdown>
+              <textarea data-template>
+                
+## Outline
+
+- Location Analysis
+- Air Quality Prediction
+- Illegal Parking Detection
+- Other Projects
+
+              </textarea>
+            </section>
+          
+          
+            <section>
+              
+                <section data-markdown>
+                  <textarea data-template>
+                    
+
+# Location Analysis
+
+
+
+                  </textarea>
+                </section>
+              
+                <section data-markdown>
+                  <textarea data-template>
+                    
+
+<!-- .slide: data-background="media/mapping.png" -->
+
+
+                  </textarea>
+                </section>
+              
+                <section data-markdown>
+                  <textarea data-template>
+                    
+
+## Background
+
+- MoMAGIC is one of the leading Indian companies in the Mobile AdTech & IoT space.
+- Help customers understand their customers better
+- Provide more accurate and personalized services or advertisements
+- Challenges
+    - The amount of data is large and messy
+    - Administrative divisions are not consistent
+
+
+                  </textarea>
+                </section>
+              
+                <section data-markdown>
+                  <textarea data-template>
+                    
+
+## Data
+
+- Data source: customers, vendors and open data
+- Data type: 
+    - Location data from users: ID, geolocation and timestamp
+    - Point of Interesting data: geolocation, category, real estate price and salary.
+
+
+
+                  </textarea>
+                </section>
+              
+                <section data-markdown>
+                  <textarea data-template>
+                    
+
+## Data
+
+- Data preprocessing:
+    - Each user should have signals at least 7 days in the past 30 days.
+    - Signals should cover from Monday to Sunday.
+    - At least average 10 signals per day for each user.
+
+
+
+
+                  </textarea>
+                </section>
+              
+                <section data-markdown>
+                  <textarea data-template>
+                    
+
+<!-- .slide: data-background="media/latlon.png" -->
+
+
+
+                  </textarea>
+                </section>
+              
+                <section data-markdown>
+                  <textarea data-template>
+                    
+
+## Model
+
+- Geolocation data would be a bunch of points on the same location
+- DBSCAN: Density-based spatial clustering of applications with noise
+    - Handles irregularly shaped and sized clusters
+    - Robust to outliers
+    - Does not require the number of clusters to be specified
+
+
+                  </textarea>
+                </section>
+              
+                <section data-markdown>
+                  <textarea data-template>
+                    
+
+### DBSCAN
+
+[![](media/clustering.png)](media/DBSCAN.png)
+
+
+
+                  </textarea>
+                </section>
+              
+                <section data-markdown>
+                  <textarea data-template>
+                    
+
+## Mapping User Location to POI
+
+![](media/fence.png)
+- Electronic Fence: 
+    - Closest place for user location
+
+
+
+
+                  </textarea>
+                </section>
+              
+                <section data-markdown>
+                  <textarea data-template>
+                    
+
+<!-- .slide: data-background="media/mapping.png" -->
+
+
+
+
+
+                  </textarea>
+                </section>
+              
+            </section>
+          
+        
+          
+            <section>
+              
+                <section data-markdown>
+                  <textarea data-template>
+                    
+
+# Air Quality Prediction
+
+
+
+                  </textarea>
+                </section>
+              
+                <section data-markdown>
+                  <textarea data-template>
+                    
+
+![](media/pm2_5.png)
+
+
+                  </textarea>
+                </section>
+              
+                <section data-markdown>
+                  <textarea data-template>
+                    
+
+## Background
+
+- Smart City Taiwan Project
+- Monitor and predict air quality in industrial area
+- Challenges
+    - Data quality
+    - Only 3 airboxes
+    - Cannot get data in the beginning
+
+
+                  </textarea>
+                </section>
+              
+                <section data-markdown>
+                  <textarea data-template>
+                    
+
+## Data
+
+- Data source: airbox (include open data)
+- Data type: time and PM2.5
+- Data preprocessing:
+    - 10-minute interval candlestick
+        - Open, High, Low, and Close
+        - Only use the closing value.
+
+
+
+                  </textarea>
+                </section>
+              
+                <section data-markdown>
+                  <textarea data-template>
+                    
+
+### Candlestick
+
+![](media/candlestick.jpeg)
+
+
+
+                  </textarea>
+                </section>
+              
+                <section data-markdown>
+                  <textarea data-template>
+                    
+
+## Data
+
+- Data preprocessing:
+    - Use two hours of data to predict the data for the next time point
+    - Nomalization: (x - min) / (max - min)
+    - Training:Validation:Testing = 7:2:1
+    
+
+
+
+                  </textarea>
+                </section>
+              
+                <section data-markdown>
+                  <textarea data-template>
+                    
+
+## Model
+
+- Long Short Term Memory (LSTM)
+- Loss function: MSE (< 1e-5)
+
+
+![](media/LSTM_3.png)
+
+
+
+                  </textarea>
+                </section>
+              
+                <section data-markdown>
+                  <textarea data-template>
+                    
+
+## Extention
+
+- Water quality
+- [Taiwan dollar to US dollar exchange rate](media/chatbot.png)
+- Patent: A SMART TRENCH COVER SYSTEM FOR DETECTING FLOODS AND A METHOD FOR PERFORMING THE SAME
+
+
+
+                  </textarea>
+                </section>
+              
+            </section>
+          
+        
+          
+            <section>
+              
+                <section data-markdown>
+                  <textarea data-template>
+                    
+
+# Illegal Parking Detection
+
+
+
+                  </textarea>
+                </section>
+              
+                <section data-markdown>
+                  <textarea data-template>
+                    
+
+[![](media/parking.png)](https://www.youtube.com/watch?v=xcdq3w2lOt4)
+
+
+
+                  </textarea>
+                </section>
+              
+                <section data-markdown>
+                  <textarea data-template>
+                    
+
+## Background
+
+- Smart City Taiwan Project
+- Detecting illegal parking situations in industrial.
+- Challenges
+    - Object detection model cannot track object
+    - Sometimes objects will be detected twice in a frame
+
+
+                  </textarea>
+                </section>
+              
+                <section data-markdown>
+                  <textarea data-template>
+                    
+
+![](media/mios_car.jpeg)
+
+
+                  </textarea>
+                </section>
+              
+                <section data-markdown>
+                  <textarea data-template>
+                    
+
+## Data
+
+- Data source: 
+    - Open Images Dataset
+    - Images from CCTV
+- Object type: car, truck, bus, bike
+- Data preprocessing:
+    - Create Annotation
+        - Automatically
+        - Mannually
+    - Augmentation
+
+
+                  </textarea>
+                </section>
+              
+                <section data-markdown>
+                  <textarea data-template>
+                    
+
+## Model
+- Object Detection: YOLO v2
+- Tracker: Dlib correlation traker
+- Max intersection over single
+
+```python
+"""
+|-------|
+| A |---|----|
+|   | I |    |
+|---|---|    |
+    |     B  |
+    |--------|
+max(I/A, I/B)
+"""
+```
+
+
+
+                  </textarea>
+                </section>
+              
+                <section data-markdown>
+                  <textarea data-template>
+                    
+
+[![](media/parking.png)](https://www.youtube.com/watch?v=xcdq3w2lOt4)
+
+
+
+                  </textarea>
+                </section>
+              
+            </section>
+          
+        
+          
+            <section>
+              
+                <section data-markdown>
+                  <textarea data-template>
+                    
+
+## Other Projects
+
+- Biomedical
+    - Simplify Malnutrition Survey Mechanisms
+    - [Model](https://hackmd.io/_uploads/ryWHUjwS2.png) [for Liver fibrosis](https://pubmed.ncbi.nlm.nih.gov/28548299/)
+- Time Series Data
+    - Reinforcement Learning for future trading
+    - The Serial Correlation Analysis of the Price Movements of Taiwan Weighted Stock Index Futures
+
+
+
+                  </textarea>
+                </section>
+              
+                <section data-markdown>
+                  <textarea data-template>
+                    
+
+## Other Projects
+
+- Computer Vision
+    - 2022 COSCUP- [Anti iHunch](https://kuiming.github.io/anti_iHunch/presentation/output/index.html#/)
+    - [Recycle](https://www.youtube.com/watch?v=55BOh6R_QQM&list=PLZ7oApS1nsH7KxfFakr0ZwIeAKy_gUeK_#t=7m32s)
+    - [Anomaly detection for Dispenser](https://www.youtube.com/watch?v=Yk7DKYoVO5Y)
+    - [Porduct Search](media/product_search.png)
+- Prompt Engineer
+    - [AI project creator](https://demo.chimes.ai/ai-project-generator/edit-job?step=1)
+
+
+                  </textarea>
+                </section>
+              
+            </section>
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+Leverage my skills to solve problems in my life. 
+                </textarea>
+              </section>
+            
+          
+        
+      </div>
+
+    </div>
+
+    <!-- Reveal.js script -->
+    <script src="static/revealjs/dist/reveal.js"></script>
+
+    <!-- Reveal.js plugins -->
+    <script src="static/revealjs/plugin/markdown/markdown.js"></script>
+    <script src="static/revealjs/plugin/highlight/highlight.js"></script>
+    <script src="static/revealjs/plugin/search/search.js"></script>
+    <script src="static/revealjs/plugin/notes/notes.js"></script>
+    <script src="static/revealjs/plugin/math/math.js"></script>
+    <script src="static/revealjs/plugin/zoom/zoom.js"></script>
+
+    <script>
+      Reveal.initialize({
+        math: {
+          mathjax: 'static/mathjax/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          // pass other options into `MathJax.Hub.Config()`
+          TeX: { Macros: { RR: "{\\bf R}" } }
+        },
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealSearch,
+          RevealNotes,
+          RevealMath,
+          RevealZoom
+        ]
+      });
+
+      Reveal.configure({"autoAnimate": true, "autoAnimateDuration": 1.0, "autoAnimateEasing": "ease", "autoAnimateMatcher": null, "autoAnimateStyles": ["opacity", "color", "background-color", "padding", "font-size", "line-height", "letter-spacing", "border-width", "border-color", "border-radius", "outline", "outline-offset"], "autoAnimateUnmatched": true, "autoPlayMedia": null, "autoSlide": 0, "autoSlideMethod": null, "autoSlideStoppable": true, "backgroundTransition": "fade", "center": true, "controls": true, "controlsBackArrows": "faded", "controlsLayout": "bottom-right", "controlsTutorial": true, "defaultTiming": null, "disableLayout": false, "display": "block", "embedded": false, "focusBodyOnPageVisibilityChange": true, "fragmentInURL": true, "fragments": true, "hash": true, "hashOneBasedIndex": false, "help": true, "hideCursorTime": 5000, "hideInactiveCursor": true, "history": true, "keyboard": true, "keyboardCondition": null, "loop": false, "mobileViewDistance": 2, "mouseWheel": false, "navigationMode": "default", "overview": true, "pause": true, "pdfPageHeightOffset": -1, "pdfSeparateFragments": true, "postMessage": true, "postMessageEvents": false, "preloadIframes": null, "previewLinks": false, "progress": true, "respondToHashChanges": true, "rtl": false, "showNotes": false, "showSlideNumber": "all", "shuffle": false, "slideNumber": false, "touch": true, "transition": "slide", "transitionSpeed": "default", "viewDistance": 3});
+    </script>
+  </body>
+</html>
