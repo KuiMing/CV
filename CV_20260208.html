@@ -232,6 +232,24 @@
             margin: 5px -30px -15px -30px;
         }
         
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3px;
+        }
+        
+        .thesis-info {
+            margin-top: 5px;
+            padding: 3px 5px;
+            background: #f8f9fa;
+            border-radius: 2px;
+            font-size: 0.8em;
+        }
+        
+        .publications-list {
+            font-size: 0.8em;
+        }
+        
         .two-column {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -264,7 +282,7 @@
             
             @page {
                 size: A4;
-                margin: 10mm;
+                margin: 15mm;
             }
         }
         
@@ -445,14 +463,14 @@
                             </tbody>
                         </table>
                         
-                        <div style="margin-top: 5px; padding: 3px 5px; background: #f8f9fa; border-radius: 2px; font-size: 0.8em;">
+                        <div class="thesis-info">
                             <strong>Thesis:</strong> Effects of Age on EEG Activity during Driving (ICA, time-frequency analysis)
                         </div>
                     </div>
                     
                     <div class="section">
                         <h2 class="section-title">Licenses</h2>
-                        <div style="display: flex; flex-wrap: wrap; gap: 3px;">
+                        <div class="badge-container">
                             <span class="badge">Senior Radiation Protection</span>
                             <span class="badge">Medical Radiation Technologist</span>
                         </div>
@@ -460,7 +478,7 @@
                     
                     <div class="section">
                         <h2 class="section-title">Publications & Patents</h2>
-                        <ul style="font-size: 0.8em;">
+                        <ul class="publications-list">
                             <li>Liver fibrosis prediction model - <a href="https://pubmed.ncbi.nlm.nih.gov/28548299/" target="_blank">PubMed: 28548299</a></li>
                             <li>Patent: Smart Trench Cover System for Flood Detection</li>
                         </ul>
