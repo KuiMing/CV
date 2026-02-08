@@ -27,6 +27,7 @@
                 - 醫學放射技術學系
                 - 生物醫學資訊研究所
         - 經歷
+            - OneLab CTO-Office Department Manager
             - Data Scientist
                 - Momagic Inc.
                 - Linker Networks Inc.
