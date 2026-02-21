@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kui-Ming Chen (陳奎銘) - CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.3;
+            color: #333;
+            background: white;
+            padding: 0;
+            font-size: 9pt;
+        }
+        
+        .container {
+            max-width: 210mm;
+            width: 210mm;
+            margin: 0 auto;
+            background: white;
+            box-shadow: none;
+            border-radius: 0;
+            overflow: hidden;
+            padding: 15px 30px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 15px 10px;
+            text-align: center;
+            margin: -15px -30px 10px -30px;
+        }
+        
+        .header h1 {
+            font-size: 1.5em;
+            margin-bottom: 2px;
+            font-weight: 600;
+        }
+        
+        .header .subtitle {
+            font-size: 0.9em;
+            margin-bottom: 3px;
+            opacity: 0.95;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 3px;
+            font-size: 0.75em;
+        }
+        
+        .contact-info div {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+        
+        .content {
+            padding: 0;
+        }
+        
+        .section {
+            margin-bottom: 8px;
+        }
+        
+        .section-title {
+            font-size: 1.1em;
+            color: #667eea;
+            border-bottom: 1.5px solid #667eea;
+            padding-bottom: 2px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .summary {
+            background: #f8f9fa;
+            padding: 5px 8px;
+            border-radius: 3px;
+            border-left: 2px solid #667eea;
+            margin-bottom: 5px;
+            font-size: 0.85em;
+        }
+        
+        .summary p {
+            margin-bottom: 2px;
+        }
+        
+        .job, .education-item, .project-item {
+            margin-bottom: 6px;
+            padding-left: 8px;
+            border-left: 0;
+            position: relative;
+        }
+        
+        .job::before, .education-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            background: transparent;
+            border-radius: 0;
+        }
+        
+        .job-title {
+            font-size: 0.95em;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 1px;
+            display: inline;
+        }
+        
+        .company {
+            font-size: 0.9em;
+            color: #667eea;
+            font-weight: 500;
+            margin-bottom: 1px;
+            display: inline;
+        }
+        
+        .location, .duration {
+            color: #718096;
+            font-style: italic;
+            font-size: 0.8em;
+            display: inline;
+        }
+        
+        ul {
+            margin-left: 12px;
+            margin-top: 2px;
+        }
+        
+        ul li {
+            margin-bottom: 1px;
+            line-height: 1.2;
+            font-size: 0.85em;
+        }
+        
+        ul ul {
+            margin-top: 1px;
+            margin-left: 10px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin-top: 3px;
+        }
+        
+        .skill-category {
+            background: #f8f9fa;
+            padding: 4px 6px;
+            border-radius: 2px;
+            border-left: 2px solid #667eea;
+        }
+        
+        .skill-category h4 {
+            color: #667eea;
+            margin-bottom: 2px;
+            font-size: 0.9em;
+        }
+        
+        .skill-category ul {
+            margin-left: 10px;
+            list-style-type: none;
+        }
+        
+        .skill-category ul li::before {
+            content: "• ";
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 3px;
+            font-size: 0.85em;
+        }
+        
+        table th, table td {
+            padding: 3px 5px;
+            text-align: left;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        table th {
+            background: #f8f9fa;
+            color: #667eea;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 8px;
+            font-size: 0.75em;
+            margin-right: 4px;
+            margin-bottom: 2px;
+        }
+        
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 5px;
+            background: #f8f9fa;
+            color: #718096;
+            font-size: 0.7em;
+            margin: 5px -30px -15px -30px;
+        }
+        
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3px;
+        }
+        
+        .thesis-info {
+            margin-top: 5px;
+            padding: 3px 5px;
+            background: #f8f9fa;
+            border-radius: 2px;
+            font-size: 0.8em;
+        }
+        
+        .publications-list {
+            font-size: 0.8em;
+        }
+        
+        .two-column {
+            display: block;
+        }
+        
+        .column {
+            min-width: 0;
+            margin-bottom: 8px;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+                font-size: 8.5pt;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+                padding: 10px 20px;
+            }
+            
+            .header {
+                background: #667eea;
+                color: white !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            @page {
+                size: 210mm 297mm;
+                margin: 15mm;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Kui-Ming Chen (陳奎銘)</h1>
+            <div class="subtitle">Chief Technology Officer / VP of Engineering</div>
+            <div class="contact-info">
+                <div>📞 0919784598</div>
+                <div>✉️ benjamin0901@gmail.com</div>
+                <div>Microsoft AI MVP</div>
+            </div>
+            <div style="margin-top: 10px; font-size: 0.9em;">
+                3F., No.10, Ln. 77, Jingren St., Wenshan Dist., Taipei City 116, Taiwan
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">Executive Summary</h2>
+                <div class="summary">
+                    <p><strong>Technology Executive & Strategic Leader</strong> with 10+ years driving organizational transformation through AI/ML innovation. Currently serving as Department Manager in CTO Office, leading 20+ technical professionals across Data Science, Database, Infrastructure, and SRE teams. Proven track record of architecting enterprise-scale ML solutions, driving company-wide digital transformation, and building high-performing technical organizations. Expert in aligning technology strategy with business objectives while fostering innovation culture and technical excellence.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Executive Competencies</h2>
+                <div class="summary" style="padding: 3px 8px;">
+                    <strong>Strategic Leadership:</strong> Technology Vision & Roadmap • Digital Transformation • Cross-functional Team Management • Stakeholder Alignment • Budget & Resource Planning<br>
+                    <strong>Technical Expertise:</strong> AI/ML Architecture • Cloud Infrastructure • Data Engineering • Software Development Lifecycle • Security & Compliance
+                </div>
+            </div>
+            
+            <div class="two-column">
+                <div class="column">
+                    <div class="section">
+                        <h2 class="section-title">Executive & Technical Leadership Experience</h2>
+                        
+                        <div class="job">
+                            <div class="job-title">Department Manager, CTO Office</div> • <div class="company">OneLab</div> • <div class="location">Present</div>
+                            <ul>
+                                <li><strong>Executive leadership</strong> of 4 technical departments (Data Science, DBA, MIS, SRE) with 20+ engineers across distributed teams</li>
+                                <li>Architecting and executing company-wide <strong>AI/digital transformation strategy</strong>, driving adoption of ML/AI across all business units</li>
+                                <li>Led cross-functional initiative using <strong>AI-generated video content</strong>, increased customer acquisition 30% and reduced content production costs by 40%</li>
+                                <li>Defined 3-year technology roadmap aligned with business objectives, established engineering best practices (code review, CI/CD, monitoring)</li>
+                                <li>Championed legacy system modernization, migrating monolithic applications to microservices architecture, improving system reliability to 99.9%</li>
+                                <li>Budget planning ($2M+ annual) and resource allocation for technical infrastructure, tooling, and strategic team growth initiatives</li>
+                                <li>Built talent pipeline through mentorship programs and technical community engagement, reducing turnover by 25%</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="job">
+                            <div class="job-title">Data Applications Expert (Advisor)</div> • <div class="company">Ministry of Digital Affairs (MODA)</div>
+                            <ul>
+                                <li>Strategic advisor to government agencies on <strong>national data strategy & digital transformation</strong></li>
+                                <li>Leading cross-agency collaboration for large-scale data application initiatives, establishing data governance frameworks</li>
+                                <li>Advising on AI/ML adoption in public sector, evaluating technology vendors and architectural decisions</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="job">
+                            <div class="job-title">Senior Data Scientist / Tech Lead</div> • <div class="company">Linker Networks</div>
+                            <ul>
+                                <li><strong>Architected enterprise ML platform</strong> for Smart City applications (air quality prediction, illegal parking detection, traffic flow optimization)</li>
+                                <li>Designed scalable <strong>ML infrastructure</strong> processing 1M+ data points daily, from data ingestion to production deployment with automated retraining</li>
+                                <li>Led technical team of 5 data scientists, established MLOps practices and model monitoring frameworks</li>
+                                <li>Reduced model deployment time from weeks to hours through automated pipeline development</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="job">
+                            <div class="job-title">Data Science Team Lead</div> • <div class="company">Momagic Inc.</div>
+                            <ul>
+                                <li>Built and led <strong>location analytics platform</strong> serving 10M+ AdTech requests daily with sub-100ms latency</li>
+                                <li>Developed real-time user behavior analysis using geolocation data, improving ad targeting accuracy by 35%</li>
+                                <li>Managed data science team of 3, mentored junior data scientists on ML best practices and production systems</li>
+                                <li>Implemented DBSCAN clustering and POI mapping algorithms, enabling new revenue stream worth $500K annually</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="job">
+                            <div class="job-title">Curriculum Lead & Instructor</div> • <div class="company">DataSci</div> • <div class="location">2015-2020</div>
+                            <ul>
+                                <li><strong>Built comprehensive data science education program:</strong> Recruited 15+ instructors, designed 20+ courses covering R, Python, ML, web development</li>
+                                <li>Taught 100+ students across corporate training and public workshops, achieving 95% satisfaction rating</li>
+                                <li>Developed curriculum roadmap aligned with industry needs, partnered with universities and enterprises for program delivery</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="job">
+                            <div class="job-title">Research Scientist</div> • <div class="company">General Biologicals</div> • <div class="location">2013-2020</div>
+                            <ul>
+                                <li><strong>ML Research:</strong> Liver fibrosis prediction using Adaboost ensemble method, achieved 50% accuracy improvement over baseline (<a href="https://pubmed.ncbi.nlm.nih.gov/28548299/" target="_blank">published</a> in peer-reviewed journal)</li>
+                                <li>Led GMP quality management systems and production operations for medical device manufacturing, ensuring regulatory compliance</li>
+                                <li>Managed product development lifecycle for PRP products, increased revenue by 10M TWD through customer relationship management</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <h2 class="section-title">Community Leadership</h2>
+                        <ul style="margin-left: 12px; font-size: 0.85em;">
+                            <li><strong>Microsoft AI MVP</strong> - Recognition for AI/ML technical expertise and community contributions</li>
+                            <li><strong>R-Ladies Taipei Co-organizer</strong> - Promoting diversity in data science</li>
+                            <li><strong>Conference Speaker</strong> - COSCUP, Taiwan Data Science Conference, multiple universities</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="section">
+                        <h2 class="section-title">Key ML/AI Projects</h2>
+                        <ul style="font-size: 0.85em;">
+                            <li><strong>Smart City AI:</strong> Air quality prediction (LSTM), parking detection (YOLO v2), flood detection (patent)</li>
+                            <li><strong>Computer Vision:</strong> Posture correction, recycling classification, anomaly detection</li>
+                            <li><strong>Location Analytics:</strong> AdTech platform with DBSCAN clustering, geofencing</li>
+                            <li><strong>Biomedical ML:</strong> Liver fibrosis prediction (Adaboost, 50% accuracy gain)</li>
+                            <li><strong>AI Tools:</strong> <a href="https://demo.chimes.ai/ai-project-generator/edit-job?step=1" target="_blank">AI project generator</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <div class="section">
+                        <h2 class="section-title">Technical Expertise</h2>
+                        <div style="font-size: 0.85em; line-height: 1.4;">
+                            <strong>ML/AI:</strong> Deep Learning • Computer Vision • Time Series • NLP<br>
+                            <strong>Architecture:</strong> Cloud (AWS/GCP) • Microservices • Scalability • DevOps/SRE<br>
+                            <strong>Languages:</strong> Python • R • SQL • Go<br>
+                            <strong>Platforms:</strong> TensorFlow • PyTorch • Kubernetes • Docker
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <h2 class="section-title">Education & Certifications</h2>
+                        <div style="font-size: 0.85em;">
+                            <div style="margin-bottom: 3px;"><strong>M.S. Medical Radiation Technology</strong>, National Yang-Ming University (2006-2008)</div>
+                            <div style="margin-bottom: 3px;"><strong>B.S. Biomedical Informatics</strong>, National Yang-Ming University (2002-2006)</div>
+                            <div style="margin-bottom: 3px;"><strong>Thesis:</strong> EEG Activity Analysis during Driving (ICA, time-frequency analysis)</div>
+                            <div class="badge-container" style="margin-top: 5px;">
+                                <span class="badge">Microsoft AI MVP</span>
+                                <span class="badge">Medical Radiation Technologist</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <h2 class="section-title">Publications</h2>
+                        <ul class="publications-list">
+                            <li>Liver fibrosis prediction model - <a href="https://pubmed.ncbi.nlm.nih.gov/28548299/" target="_blank">PubMed: 28548299</a></li>
+                            <li>Patent: Smart Trench Cover System for Flood Detection</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Last Updated: February 8, 2026</p>
+        </div>
+    </div>
+</body>
+</html>
